@@ -8,17 +8,18 @@ const test03 = [97.4, 38.2, 7.8, -3.4, -5, -6.6, -17.8];
 const test04 = [81, 16, 1, 0, 1, 16, 81];
 
 const calcMargin = 0.15;
-
 let pow = 0;
 
 // la funcion recive un arreglo de numeros y retorna un arreglo con la variacion de la succecion
-function cal(arr) {
+function calc(arr) {
     console.log("sucesión: " + arr + " | iteracion: " + pow);
 
     //comprobar el caso base, es decir que no hay variacion
     let uniqueArr = checkVariation(arr);
     if (uniqueArr.length == 1 || isClose(arr)) {
         console.log(`la susecion es de potencia: ${pow}, y su variacion es de: ${uniqueArr[0]}`);
+        console.log("------------------------------------------------------");
+        pow = 0;
         return;
     }
 
@@ -32,7 +33,7 @@ function cal(arr) {
 
     pow++;
 
-    cal(difArr);
+    calc(difArr);
 }
 
 function checkVariation(arr) {
@@ -52,6 +53,3 @@ function isClose(arr) {
 function getDifference(a, b) {
     return -(a - (b));
 }
-
-cal(test03);
-// isClose(test03);
