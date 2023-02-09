@@ -10,7 +10,7 @@ const test04 = [81, 16, 1, 0, 1, 16, 81];
 const calcMargin = 0.15;
 let pow = 0;
 
-// la funcion recive un arreglo de numeros y retorna un arreglo con la variacion de la succecion
+// la funcion recive un arreglo de numeros y retorna un nuevo arreglo con los resultados
 function calc(arr) {
     console.log("sucesión: " + arr + " | iteracion: " + pow);
 
